@@ -1,0 +1,53 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "chocolate box",
+            "price": 1000,
+            "category": "cake",
+            "image": "../../assets/chocolate-box.jpg"
+        },
+        {
+            "id": 2,
+            "name": "black shampoo",
+            "price": 2000,
+            "category": "shampoo",
+            "image": "../../assets/black-shampoo.jpg"
+        }, 
+        {
+            "id": 3,
+            "name": "Lipice",
+            "price": 3000,
+            "category": "lipstick",
+            "image": "../../assets/lipice.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Lifebuoy",
+            "price": 4000,
+            "category": "shampoo",
+            "image": "../../assets/lifebuoy1.jpg"
+        },
+        {
+            "id": 5,
+            "name": "tiramisu-cake",
+            "price": 5000,
+            "category": "cake",
+            "image": "../../assets/tiramisu-cake.jpg"
+        },
+        {
+            "id": 6,
+            "name": "flan",
+            "price": 6000,
+            "category": "cake",
+            "image": "../../assets/flan.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Ace lip",
+            "price": 3000,
+            "category": "lipstick",
+            "image": "../../assets/acelips.jpg"
+        }
+    ]
+}
