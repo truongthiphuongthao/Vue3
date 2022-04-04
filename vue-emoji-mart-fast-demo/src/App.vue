@@ -1,14 +1,16 @@
 <template>
 <div class="container">
-  <div class="row border border-dark">
-    <textarea id="w3review" name="w3review" rows="4" cols="50" v-model="textMessage">
-    </textarea>
+  <div class="row">
+    <div class="box-message">
+        <textarea id="w3review" name="w3review" rows="4" cols="50" v-model="textMessage">
+        </textarea>
+        <span class="emojiElement">
+          <emoji :data="emojiIndex" emoji=":grinning:" :size="32" @click.self="showPicker = !showPicker" set="twitter"/>
+          <Picker :data="emojiIndex" set="google" @select="showEmoji" v-if="showPicker" :style="{ position: 'absolute', bottom: '10px', left: '40px', top: '20px' }"  />
+        </span>  
+    </div>
   </div>
-  <div class="row border border-dark">
-     <emoji :data="emojiIndex" emoji=":grinning:" :size="32" @click.self="showPicker = !showPicker" set="twitter"/>
-     <Picker :data="emojiIndex" set="google" @select="showEmoji" v-if="showPicker" />
-  </div>
-  <div class="row border border-dark">
+  <div class="row">
     <div>
       Result message: {{ textMessage }}
     </div>
@@ -57,5 +59,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.box-message {
+  position: relative;
+  width: 1000px;
+  height: 200px;
+  /* border: 3px solid #73AD21; */
+}
+.emojiElement {
+  position: absolute;
+  /* border: 3px solid #73AD21; */
+  top: 110px;
+  bottom: 0;
+  left: 280px;
 }
 </style>
