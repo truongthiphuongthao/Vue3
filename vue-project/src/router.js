@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router"
-import Login from "./components/login.vue"
-import Home from "./components/home.vue"
-import DetailProduct from "./components/detailProduct.vue"
+import Login from "./pages/login.vue"
+import Home from "./pages/home.vue"
+import DetailProduct from "./pages/detailProduct.vue"
+import Contact from "./pages/contact.vue"
+import Register from "./pages/register.vue"
+import NotFoundPage from "./pages/notFoundPage.vue"
 const routes = [
     {
         path: "/login",
@@ -20,7 +23,21 @@ const routes = [
     },
     {
         path: "/",
-        redirect: "/login"
+        redirect: "/home"
+    },
+    {
+        path: "/contact",
+        name: "contact-route",
+        component: Contact
+    },
+    {
+        path: "/register",
+        name: "register-route",
+        component: Register
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        component: NotFoundPage
     }
 ]
 

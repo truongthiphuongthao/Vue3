@@ -1,7 +1,6 @@
 <template>
-    <h1> Homepage </h1>
-    <div class="container">
-        <p> List product </p>
+    <div class="container mt-5">
+        <h1> Homepage </h1>
         <div class="row"> 
             <div class="col-md-12"> 
                 <input type="text" v-model="searchText" />
@@ -9,7 +8,7 @@
                     <p> {{ item.name }} </p>
                 </div>
             </div>
-            <div class="col-md-12"> 
+            <div class="col-md-12 mt-3"> 
                 <div class="row"> 
                     <div class="col-md-2"> 
                         <button type="button" class="btn btn-primary btn-sm" @click="getShampoo"> Shampoo </button>
@@ -68,7 +67,6 @@
             fetch('http://localhost:3000/product')
             .then(response => response.json())
             .then(data => this.listProduct = data)
-            .then(() => console.log(this.listProduct))
         },
         watch: {
             searchText(){
@@ -77,13 +75,11 @@
                 if(this.searchText.length > 0){
                     filterObjectData = this.listProduct.filter(function(obj){
                         if(obj.name.includes(keywordFind)){
-                            // console.log(obj.name)
                             return obj.name
                         }
                     })
                 }
                 this.listFilterData = filterObjectData
-                console.log(this.listFilterData)
             }
         },
         methods: {
@@ -93,8 +89,6 @@
                 this.filterList = this.listProduct.filter(function(el){
                     return el.category == "shampoo"
                 })
-                console.log(this.filterList)
-                console.log("shampoo")
             },
             getCake(){
                 this.filterList = null
@@ -113,7 +107,7 @@
                     return el.category == "lipstick"
                 })
             }
-        },
+        }
         // setup(){
         //     const { listProduct, fetchAll } = fetchListProduct()
         //     fetchAll()

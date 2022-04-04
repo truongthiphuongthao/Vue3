@@ -30,14 +30,14 @@
         },
         {
             "id": 5,
-            "name": "tiramisu-cake",
+            "name": "Tiramisu cake",
             "price": 5000,
             "category": "cake",
             "image": "../../assets/tiramisu-cake.jpg"
         },
         {
             "id": 6,
-            "name": "flan",
+            "name": "Flan cake",
             "price": 6000,
             "category": "cake",
             "image": "../../assets/flan.jpg"

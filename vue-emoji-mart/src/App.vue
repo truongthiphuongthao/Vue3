@@ -1,18 +1,17 @@
 <template>
-  <nav-header> </nav-header>
-  <!-- <home> </home> -->
-  <router-view> </router-view>
+  <h1> hello </h1>
+  <Picker style={{ position: 'absolute', bottom: '20px', right: '20px' }} />
 </template>
 
 <script>
-// import Home from "./pages/home.vue"
-import Nav from "./components/Nav.vue"
+import 'emoji-mart/css/emoji-mart.css'
+import { Picker } from 'emoji-mart'
+
 export default {
   name: "App",
   components: {
-    // Home,
-    NavHeader: Nav
-  }
+    Picker
+  },
 };
 </script>
 
